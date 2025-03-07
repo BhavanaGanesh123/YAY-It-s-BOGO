@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOGO Offer</title>
+    <script>
+        function updateTotal(price, element) {
+            // Set the total price
+            document.querySelector(".total-price").innerText = "Total: " + price;
+            
+            // Select the corresponding radio button
+            let radio = element.querySelector("input[type='radio']");
+            if (radio) {
+                radio.checked = true;
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>YAY! It's BOGO</h2>
+
+        <!-- 1 Unit Box -->
+        <div class="offer-box" onclick="updateTotal('$10.00 USD', this)">
+            <div class="top-row">
+                <div class="unit-container">
+                    <input type="radio" name="offer">
+                    <label class="unit-label">1 Unit</label>
+                    <span class="discount">10% Off</span>
+                </div>
+                <div class="price-container">
+                    <span class="price">$10.00 USD</span>
+                    <span class="original-price">$24.00 USD</span>
+                </div>
+            </div>
+            <p class="standard-price">Standard Price</p>
+        </div>
+
+        <!-- 2 Unit Box (Most Popular) -->
+        <div class="offer-box popular-box" onclick="updateTotal('$18.00 USD', this)">
+            <span class="most-popular">MOST POPULAR</span>
+            <div class="top-row">
+                <div class="unit-container">
+                    <input type="radio" name="offer">
+                    <label class="unit-label">2 Unit</label>
+                    <span class="discount">20% Off</span>
+                </div>
+                <div class="price-container">
+                    <span class="price">$18.00 USD</span>
+                    <span class="original-price">$24.00 USD</span>
+                </div>
+            </div>
+
+            <!-- Size and Colour Table -->
+            <table class="options-table">
+                <thead>
+                    <tr>
+                        <th>Size</th>
+                        <th>Colour</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <select><option>S</option><option>M</option></select>
+                        </td>
+                        <td>
+                            <select><option>Black</option><option>Red</option></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select><option>S</option><option>M</option></select>
+                        </td>
+                        <td>
+                            <select><option>Red</option><option>Black</option></select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 3 Unit Box -->
+        <div class="offer-box" onclick="updateTotal('$24.00 USD', this)">
+            <div class="top-row">
+                <div class="unit-container">
+                    <input type="radio" name="offer">
+                    <label class="unit-label">3 Unit</label>
+                    <span class="discount">30% Off</span>
+                </div>
+                <div class="price-container">
+                    <span class="price">$24.00 USD</span>
+                    <span class="original-price">$24.00 USD</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="free-delivery">Free Delivery</p>
+        <p class="total-price">Total: $10.00 USD</p>
+        <button class="add-to-cart">+ Add to Cart</button>
+    </div>
+
+</body>
+</html>
