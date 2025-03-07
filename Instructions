@@ -1,0 +1,8 @@
+How to use it:
+step-1:Open VS code
+step-2: Create two file anyname.HTML & "style.css" -> (Note: Here you need to use "style.css" as main thing since the name is used to link between them)
+step-3:  paste the code in to respective files
+step-4: Now double click/Open .html file such that it will redirect to your preferred web  
+Pre requirements-> use .css file name as "style.css" 
+
+Requirements: Any type internet with VS Code
